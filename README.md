@@ -38,13 +38,22 @@ python hdrvivid_tool.py -i input.hevc --inject-bin hdr_vivid_full.bin -o output.
 
 ---
 
+## Important Note About Test Files
+
 ## Notes
 
-This project is a conceptual implementation inspired by [dovi\_tool](https://github.com/quietvoid/dovi_tool), adapted specifically for HDR Vivid, the Chinese HDR format.
+This project is a conceptual and experimental implementation inspired by [dovi_tool](https://github.com/quietvoid/dovi_tool), adapted specifically for HDR Vivid, the Chinese HDR format.
 
-Please be advised that this tool is currently experimental and may not function correctly in all scenarios. The implementation is subject to errors and inaccuracies.
+Please be advised that this tool may not function correctly in all scenarios and is subject to errors and inaccuracies.
 
-Contributions and assistance to improve the tool are welcomed.
+The files `test_hdrvivid.hevc` and `test_hdr.hevc` represent the same base video content with one key difference:
+
+- `test_hdrvivid.hevc` is the original video file **containing HDR Vivid SEI metadata**.
+- `test_hdr.hevc` is a version where the HDR Vivid SEI metadata has been **removed for testing purposes**.
+
+This setup is intended solely for testing and demonstration purposes, allowing users to **extract** the HDR Vivid metadata from `test_hdrvivid.hevc` and **inject** it into `test_hdr.hevc`, thereby illustrating how the extraction and injection functionalities of this tool are expected to operate.
+
+Any contributions, suggestions, or assistance to improve or complete the tool are highly appreciated.
 
 ---
 
